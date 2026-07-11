@@ -82,8 +82,10 @@
 <!-- /skill:chrome -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>COGNATES 6: IS Innovation & New Technologies</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="cronasia-icon.png">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;min-height:100vh;-webkit-font-smoothing:antialiased}
@@ -91,8 +93,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 /* Header */
 .hero{padding:80px 40px 60px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(230,57,70,0.08) 0%,transparent 70%);pointer-events:none}
-.hero-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#e63946;background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.2);border-radius:20px;padding:6px 16px;margin-bottom:24px}
-.hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:12px}
+.hero-badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#e63946;background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.2);border-radius:20px;padding:6px 16px;margin-bottom:24px}
+.hero h1{font-size:clamp(32px,5vw,56px);font-weight:900;letter-spacing:0;line-height:1.1;margin-bottom:12px}
 .hero h1 span{color:#e63946}
 .hero p{font-size:clamp(14px,1.8vw,18px);color:#8a8a9a;max-width:600px;margin:0 auto;line-height:1.6}
 .hero-meta{display:flex;gap:24px;justify-content:center;margin-top:24px;flex-wrap:wrap}
@@ -102,31 +104,32 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 .periods{max-width:1100px;margin:0 auto;padding:0 24px 80px}
 .period{margin-bottom:56px}
 .period-header{display:flex;align-items:center;gap:16px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid #1e1e28}
-.period-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:6px;color:#fff}
+.period-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:6px;color:#fff}
 .period-label.prelim{background:#e63946}
 .period-label.midterm{background:#f4a261;color:#111}
 .period-label.semifinal{background:#2a9d8f}
 .period-label.finals{background:#7b2cbf}
-.period-title{font-size:20px;font-weight:700;letter-spacing:-0.3px}
-.period-weeks{font-size:13px;color:#6a6a7a;margin-left:auto;font-family:'JetBrains Mono',monospace}
+.period-title{font-size:20px;font-weight:700;letter-spacing:0}
+.period-weeks{font-size:13px;color:#8a8a9a;margin-left:auto;font-family:'JetBrains Mono',monospace}
 
 /* Session list */
 .sessions{display:grid;gap:8px}
-.session-link{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:16px;padding:14px 20px;background:#141418;border:1px solid #1e1e28;border-radius:12px;text-decoration:none;color:inherit;transition:background .2s,border-color .2s,transform .15s}
+.session-link{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:16px;padding:14px 20px;background:#141418;border:1px solid #1e1e28;border-radius:8px;text-decoration:none;color:inherit;transition:background .2s,border-color .2s,transform .15s}
 .session-link:hover{background:#1a1a22;border-color:#2a2a3a;transform:translateY(-1px)}
+.session-link:focus-visible{outline:2px solid #e63946;outline-offset:3px}
 .session-link:active{transform:translateY(0)}
 .session-num{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#e63946;text-align:center}
 .session-info{display:flex;flex-direction:column;gap:2px}
-.session-title{font-size:15px;font-weight:600;letter-spacing:-0.2px}
-.session-topic{font-size:12px;color:#6a6a7a}
-.session-week{font-size:12px;color:#4a4a5a;font-family:'JetBrains Mono',monospace;text-align:right}
+.session-title{font-size:15px;font-weight:600;letter-spacing:0}
+.session-topic{font-size:12px;color:#9a9aaa}
+.session-week{font-size:12px;color:#8a8a9a;font-family:'JetBrains Mono',monospace;text-align:right}
 .session-link.disabled{opacity:0.35;pointer-events:none}
 .session-link.exam{border-color:rgba(230,57,70,0.3);background:rgba(230,57,70,0.03)}
 .session-link.exam .session-num{color:#f4a261}
 .session-link.exam .session-title{color:#f4a261}
 
 /* Footer */
-.footer{text-align:center;padding:40px 24px;border-top:1px solid #1e1e28;color:#4a4a5a;font-size:13px}
+.footer{text-align:center;padding:40px 24px;border-top:1px solid #1e1e28;color:#7a7a8a;font-size:13px}
 .footer a{color:#e63946;text-decoration:none}
 
 @media(max-width:640px){
@@ -143,11 +146,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 <header class="hero">
 <div class="hero-badge">Cronasia Foundation College, Inc.</div>
 <h1>IS Innovation & <span>New Technologies</span></h1>
-<p>COGNATES 6 • BSIS Program • 3 Units<br>20 Weeks, 40 Sessions, Complete Presentation Deck Collection</p>
+<p>COGNATES 6 • BSIS Program • 3 Units<br>20 Weeks, 32 Session Decks + Exams</p>
 <div class="hero-meta">
 
 <span>Instructor: Carvin Paul G. Tampos</span>
-<span>Sessions 25-32 Available</span>
+<span>Sessions 1-32 Available</span>
 </div>
 </header>
 
@@ -162,21 +165,21 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 </div>
 <div class="sessions">
 
-<a href="topics/1-Prelim/week1_session1_orientation_IS_innovation.html" class="session-link" target="_blank"><span class="session-num">01</span><div class="session-info"><span class="session-title">Course Orientation & What Is Innovation?</span><span class="session-topic">Definition, Information Systems, Digital Transformation</span></div><span class="session-week">Week 1</span></a>
+<a href="topics/1-Prelim/week1_session1_orientation_IS_innovation.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">01</span><div class="session-info"><span class="session-title">Course Orientation & What Is Innovation?</span><span class="session-topic">Definition, Information Systems, Digital Transformation</span></div><span class="session-week">Week 1</span></a>
 
-<a href="topics/1-Prelim/week1_session2_IS_digital_transformation.html" class="session-link" target="_blank"><span class="session-num">02</span><div class="session-info"><span class="session-title">Information Systems & Digital Transformation</span><span class="session-topic">DIKW, Digitization vs DX, Components of IS</span></div><span class="session-week">Week 1</span></a>
+<a href="topics/1-Prelim/week1_session2_IS_digital_transformation.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">02</span><div class="session-info"><span class="session-title">Information Systems & Digital Transformation</span><span class="session-topic">DIKW, Digitization vs DX, Components of IS</span></div><span class="session-week">Week 1</span></a>
 
-<a href="topics/1-Prelim/week2_session3_innovation_process.html" class="session-link" target="_blank"><span class="session-num">03</span><div class="session-info"><span class="session-title">The Innovation Process</span><span class="session-topic">8 Stages, Problem-First Thinking, Prototyping</span></div><span class="session-week">Week 2</span></a>
+<a href="topics/1-Prelim/week2_session3_innovation_process.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">03</span><div class="session-info"><span class="session-title">The Innovation Process</span><span class="session-topic">8 Stages, Problem-First Thinking, Prototyping</span></div><span class="session-week">Week 2</span></a>
 
-<a href="topics/1-Prelim/week2_session4_types_innovation_disruption.html" class="session-link" target="_blank"><span class="session-num">04</span><div class="session-info"><span class="session-title">Types of Innovation & Disruptive Technologies</span><span class="session-topic">Incremental, Radical, Sustaining, Disruptive</span></div><span class="session-week">Week 2</span></a>
+<a href="topics/1-Prelim/week2_session4_types_innovation_disruption.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">04</span><div class="session-info"><span class="session-title">Types of Innovation & Disruptive Technologies</span><span class="session-topic">Incremental, Radical, Sustaining, Disruptive</span></div><span class="session-week">Week 2</span></a>
 
-<a href="topics/1-Prelim/week3_session5_AI_fundamentals.html" class="session-link" target="_blank"><span class="session-num">05</span><div class="session-info"><span class="session-title">Artificial Intelligence Fundamentals</span><span class="session-topic">AI, ML, Deep Learning, Applications</span></div><span class="session-week">Week 3</span></a>
+<a href="topics/1-Prelim/week3_session5_AI_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">05</span><div class="session-info"><span class="session-title">Artificial Intelligence Fundamentals</span><span class="session-topic">AI, ML, Deep Learning, Applications</span></div><span class="session-week">Week 3</span></a>
 
-<a href="topics/1-Prelim/week3_session6_generative_AI_responsible_use.html" class="session-link" target="_blank"><span class="session-num">06</span><div class="session-info"><span class="session-title">Generative AI & Responsible Use</span><span class="session-topic">ChatGPT, Hallucinations, Prompt Engineering</span></div><span class="session-week">Week 3</span></a>
+<a href="topics/1-Prelim/week3_session6_generative_AI_responsible_use.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">06</span><div class="session-info"><span class="session-title">Generative AI & Responsible Use</span><span class="session-topic">ChatGPT, Hallucinations, Prompt Engineering</span></div><span class="session-week">Week 3</span></a>
 
-<a href="topics/1-Prelim/week3_session6_generative_AI_responsible_use.html" class="session-link" target="_blank"><span class="session-num">07</span><div class="session-info"><span class="session-title">Internet of Things (IoT) Basics</span><span class="session-topic">Architecture, Components, Smart Applications</span></div><span class="session-week">Week 4</span></a>
+<a href="topics/1-Prelim/week4_session7_IoT_basics.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">07</span><div class="session-info"><span class="session-title">Internet of Things (IoT) Basics</span><span class="session-topic">Architecture, Components, Smart Applications</span></div><span class="session-week">Week 4</span></a>
 
-<a href="topics/1-Prelim/week4_session8_IoT_risks_privacy.html" class="session-link" target="_blank"><span class="session-num">08</span><div class="session-info"><span class="session-title">IoT Risks, Privacy & Case Analysis</span><span class="session-topic">Security, Privacy, Evaluation Framework</span></div><span class="session-week">Week 4</span></a>
+<a href="topics/1-Prelim/week4_session8_IoT_risks_privacy.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">08</span><div class="session-info"><span class="session-title">IoT Risks, Privacy & Case Analysis</span><span class="session-topic">Security, Privacy, Evaluation Framework</span></div><span class="session-week">Week 4</span></a>
 
 <div class="session-link exam disabled"><span class="session-num">PE</span><div class="session-info"><span class="session-title">Prelim Examination</span><span class="session-topic">Weeks 1-4 Coverage • 50 Items</span></div><span class="session-week">Week 5</span></div>
 </div>
@@ -191,21 +194,21 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 </div>
 <div class="sessions">
 
-<a href="topics/2-Midterm/week6_session9_cloud_computing_fundamentals.html" class="session-link" target="_blank"><span class="session-num">09</span><div class="session-info"><span class="session-title">Cloud Computing Fundamentals</span><span class="session-topic">NIST, IaaS/PaaS/SaaS, Deployment Models</span></div><span class="session-week">Week 6</span></a>
+<a href="topics/2-Midterm/week6_session9_cloud_computing_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">09</span><div class="session-info"><span class="session-title">Cloud Computing Fundamentals</span><span class="session-topic">NIST, IaaS/PaaS/SaaS, Deployment Models</span></div><span class="session-week">Week 6</span></a>
 
-<a href="topics/2-Midterm/week6_session10_cloud_services_security.html" class="session-link" target="_blank"><span class="session-num">10</span><div class="session-info"><span class="session-title">Cloud Services, Security & Migration</span><span class="session-topic">Shared Responsibility, Serverless, 6 R's</span></div><span class="session-week">Week 6</span></a>
+<a href="topics/2-Midterm/week6_session10_cloud_services_security.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">10</span><div class="session-info"><span class="session-title">Cloud Services, Security & Migration</span><span class="session-topic">Shared Responsibility, Serverless, 6 R's</span></div><span class="session-week">Week 6</span></a>
 
-<a href="topics/2-Midterm/week7_session11_big_data_fundamentals.html" class="session-link" target="_blank"><span class="session-num">11</span><div class="session-info"><span class="session-title">Big Data Fundamentals</span><span class="session-topic">5 V's, Data Types, Technologies</span></div><span class="session-week">Week 7</span></a>
+<a href="topics/2-Midterm/week7_session11_big_data_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">11</span><div class="session-info"><span class="session-title">Big Data Fundamentals</span><span class="session-topic">5 V's, Data Types, Technologies</span></div><span class="session-week">Week 7</span></a>
 
-<a href="topics/2-Midterm/week7_session12_big_data_analytics.html" class="session-link" target="_blank"><span class="session-num">12</span><div class="session-info"><span class="session-title">Big Data Analytics & Applications</span><span class="session-topic">4 Analytics Types, CRISP-DM, Ethics</span></div><span class="session-week">Week 7</span></a>
+<a href="topics/2-Midterm/week7_session12_big_data_analytics.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">12</span><div class="session-info"><span class="session-title">Big Data Analytics & Applications</span><span class="session-topic">4 Analytics Types, CRISP-DM, Ethics</span></div><span class="session-week">Week 7</span></a>
 
-<a href="topics/2-Midterm/week8_session13_cybersecurity_fundamentals.html" class="session-link" target="_blank"><span class="session-num">13</span><div class="session-info"><span class="session-title">Cybersecurity Fundamentals</span><span class="session-topic">CIA Triad, Malware, Phishing, Social Engineering</span></div><span class="session-week">Week 8</span></a>
+<a href="topics/2-Midterm/week8_session13_cybersecurity_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">13</span><div class="session-info"><span class="session-title">Cybersecurity Fundamentals</span><span class="session-topic">CIA Triad, Malware, Phishing, Social Engineering</span></div><span class="session-week">Week 8</span></a>
 
-<a href="topics/2-Midterm/week8_session14_cyberlaw_defense.html" class="session-link" target="_blank"><span class="session-num">14</span><div class="session-info"><span class="session-title">Cybersecurity & Philippine Cyberlaw</span><span class="session-topic">RA 10175, NIST Framework, Incident Response</span></div><span class="session-week">Week 8</span></a>
+<a href="topics/2-Midterm/week8_session14_cyberlaw_defense.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">14</span><div class="session-info"><span class="session-title">Cybersecurity & Philippine Cyberlaw</span><span class="session-topic">RA 10175, NIST Framework, Incident Response</span></div><span class="session-week">Week 8</span></a>
 
-<a href="topics/2-Midterm/week9_session15_blockchain_fundamentals.html" class="session-link" target="_blank"><span class="session-num">15</span><div class="session-info"><span class="session-title">Blockchain Fundamentals</span><span class="session-topic">Decentralization, Hashing, Consensus</span></div><span class="session-week">Week 9</span></a>
+<a href="topics/2-Midterm/week9_session15_blockchain_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">15</span><div class="session-info"><span class="session-title">Blockchain Fundamentals</span><span class="session-topic">Decentralization, Hashing, Consensus</span></div><span class="session-week">Week 9</span></a>
 
-<a href="topics/2-Midterm/week9_session16_blockchain_applications.html" class="session-link" target="_blank"><span class="session-num">16</span><div class="session-info"><span class="session-title">Blockchain Applications & Evaluation</span><span class="session-topic">Smart Contracts, NFTs, DeFi, PH Use Cases</span></div><span class="session-week">Week 9</span></a>
+<a href="topics/2-Midterm/week9_session16_blockchain_applications.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">16</span><div class="session-info"><span class="session-title">Blockchain Applications & Evaluation</span><span class="session-topic">Smart Contracts, NFTs, DeFi, PH Use Cases</span></div><span class="session-week">Week 9</span></a>
 
 
 
@@ -223,23 +226,23 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 <div class="sessions">
 
 
-<a href="topics/3-Semi-final/week11_session17_extended_reality_fundamentals.html" class="session-link" target="_blank"><span class="session-num">17</span><div class="session-info"><span class="session-title">Extended Reality (XR) Fundamentals</span><span class="session-topic">VR, AR, MR, Devices, Applications</span></div><span class="session-week">Week 11</span></a>
+<a href="topics/3-Semi-final/week11_session17_extended_reality_fundamentals.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">17</span><div class="session-info"><span class="session-title">Extended Reality (XR) Fundamentals</span><span class="session-topic">VR, AR, MR, Devices, Applications</span></div><span class="session-week">Week 11</span></a>
 
-<a href="topics/3-Semi-final/week11_session18_xr_applications_evaluation.html" class="session-link" target="_blank"><span class="session-num">18</span><div class="session-info"><span class="session-title">XR Applications & Evaluation</span><span class="session-topic">Metaverse, Spatial Computing, Case Studies</span></div><span class="session-week">Week 11</span></a>
+<a href="topics/3-Semi-final/week11_session18_xr_applications_evaluation.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">18</span><div class="session-info"><span class="session-title">XR Applications & Evaluation</span><span class="session-topic">Metaverse, Spatial Computing, Case Studies</span></div><span class="session-week">Week 11</span></a>
 
-<a href="topics/3-Semi-final/week12_session19_robotics_automation.html" class="session-link" target="_blank"><span class="session-num">19</span><div class="session-info"><span class="session-title">Robotics & Industrial Automation</span><span class="session-topic">Cobots, RPA, Industry Evolution</span></div><span class="session-week">Week 12</span></a>
+<a href="topics/3-Semi-final/week12_session19_robotics_automation.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">19</span><div class="session-info"><span class="session-title">Robotics & Industrial Automation</span><span class="session-topic">Cobots, RPA, Industry Evolution</span></div><span class="session-week">Week 12</span></a>
 
-<a href="topics/3-Semi-final/week12_session20_future_of_work.html" class="session-link" target="_blank"><span class="session-num">20</span><div class="session-info"><span class="session-title">Robotics Impact & Future of Work</span><span class="session-topic">WEF, Job Displacement, T-Shaped Professional</span></div><span class="session-week">Week 12</span></a>
+<a href="topics/3-Semi-final/week12_session20_future_of_work.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">20</span><div class="session-info"><span class="session-title">Robotics Impact & Future of Work</span><span class="session-topic">WEF, Job Displacement, T-Shaped Professional</span></div><span class="session-week">Week 12</span></a>
 
-<a href="topics/3-Semi-final/week13_session21_5G_networks_edge_computing.html" class="session-link" target="_blank"><span class="session-num">21</span><div class="session-info"><span class="session-title">5G Networks & Edge Computing</span><span class="session-topic">3 Pillars, Latency, Edge, Frequency Bands</span></div><span class="session-week">Week 13</span></a>
+<a href="topics/3-Semi-final/week13_session21_5G_networks_edge_computing.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">21</span><div class="session-info"><span class="session-title">5G Networks & Edge Computing</span><span class="session-topic">3 Pillars, Latency, Edge, Frequency Bands</span></div><span class="session-week">Week 13</span></a>
 
-<a href="topics/3-Semi-final/week13_session22_5G_applications_digital_divide.html" class="session-link" target="_blank"><span class="session-num">22</span><div class="session-info"><span class="session-title">Green Computing & Sustainable IT</span><span class="session-topic">Network Slicing, PH Connectivity, Inclusion</span></div><span class="session-week">Week 13</span></a>
-
-
-<a href="topics/3-Semi-final/week14_session23_green_computing.html" class="session-link" target="_blank"><span class="session-num">22</span><div class="session-info"><span class="session-title">5G Applications & Digital Divide</span><span class="session-topic">E-waste, PUE, Energy, Carbon Footprint</span></div><span class="session-week">Week 14</span></a>
+<a href="topics/3-Semi-final/week13_session22_5G_applications_digital_divide.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">22</span><div class="session-info"><span class="session-title">5G Applications & Digital Divide</span><span class="session-topic">Network Slicing, PH Connectivity, Inclusion</span></div><span class="session-week">Week 13</span></a>
 
 
-<a href="topics/3-Semi-final/week14_session24_sustainable_tech_circular_economy.html" class="session-link" target="_blank"><span class="session-num">24</span><div class="session-info"><span class="session-title">Sustainable Technology & Circular Economy</span><span class="session-topic">Right-to-Repair, Fairphone, Greenwashing</span></div><span class="session-week">Week 14</span></a>
+<a href="topics/3-Semi-final/week14_session23_green_computing.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">23</span><div class="session-info"><span class="session-title">Green Computing & Sustainable IT</span><span class="session-topic">E-waste, PUE, Energy, Carbon Footprint</span></div><span class="session-week">Week 14</span></a>
+
+
+<a href="topics/3-Semi-final/week14_session24_sustainable_tech_circular_economy.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">24</span><div class="session-info"><span class="session-title">Sustainable Technology & Circular Economy</span><span class="session-topic">Right-to-Repair, Fairphone, Greenwashing</span></div><span class="session-week">Week 14</span></a>
 
 
 <div class="session-link exam disabled"><span class="session-num">SF</span><div class="session-info"><span class="session-title">Semi-Final Examination</span><span class="session-topic">Weeks 11-14 Coverage • 50 Items</span></div><span class="session-week">Week 15</span></div>
@@ -254,23 +257,23 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 <span class="period-weeks">Weeks 16-20</span>
 </div>
 <div class="sessions">
-<a href="topics/4-Final/week16_session25_ethical_issues_emerging_tech.html" class="session-link" target="_blank"><span class="session-num">25</span><div class="session-info"><span class="session-title">Ethical Issues in Emerging Technologies</span><span class="session-topic">AI Bias, Deepfakes, Trolley Problem, Surveillance</span></div><span class="session-week">Week 16</span></a>
+<a href="topics/4-Final/week16_session25_ethical_issues_emerging_tech.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">25</span><div class="session-info"><span class="session-title">Ethical Issues in Emerging Technologies</span><span class="session-topic">AI Bias, Deepfakes, Trolley Problem, Surveillance</span></div><span class="session-week">Week 16</span></a>
 
 
 
-<a href="topics/4-Final/week16_session26_data_privacy_intellectual_property.html" class="session-link" target="_blank"><span class="session-num">26</span><div class="session-info"><span class="session-title">Data Privacy & Intellectual Property</span><span class="session-topic">RA 10173, GDPR, Copyright, Privacy by Design</span></div><span class="session-week">Week 16</span></a>
+<a href="topics/4-Final/week16_session26_data_privacy_intellectual_property.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">26</span><div class="session-info"><span class="session-title">Data Privacy & Intellectual Property</span><span class="session-topic">RA 10173, GDPR, Copyright, Privacy by Design</span></div><span class="session-week">Week 16</span></a>
 
-<a href="topics/4-Final/week17_session27_design_thinking_process.html" class="session-link" target="_blank"><span class="session-num">27</span><div class="session-info"><span class="session-title">Design Thinking Process</span><span class="session-topic">5 Stages, Empathy Map, SCAMPER, How Might We</span></div><span class="session-week">Week 17</span></a>
+<a href="topics/4-Final/week17_session27_design_thinking_process.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">27</span><div class="session-info"><span class="session-title">Design Thinking Process</span><span class="session-topic">5 Stages, Empathy Map, SCAMPER, How Might We</span></div><span class="session-week">Week 17</span></a>
 
-<a href="topics/4-Final/week17_session28_prototyping_testing.html" class="session-link" target="_blank"><span class="session-num">28</span><div class="session-info"><span class="session-title">Prototyping & Testing</span><span class="session-topic">Paper Prototypes, User Testing, MVP, Iteration</span></div><span class="session-week">Week 17</span></a>
+<a href="topics/4-Final/week17_session28_prototyping_testing.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">28</span><div class="session-info"><span class="session-title">Prototyping & Testing</span><span class="session-topic">Paper Prototypes, User Testing, MVP, Iteration</span></div><span class="session-week">Week 17</span></a>
 
-<a href="topics/4-Final/week18_session29_digital_entrepreneurship.html" class="session-link" target="_blank"><span class="session-num">29</span><div class="session-info"><span class="session-title">Digital Entrepreneurship & Startups</span><span class="session-topic">Lean Startup, BMC, Revenue Models, PH Ecosystem</span></div><span class="session-week">Week 18</span></a>
+<a href="topics/4-Final/week18_session29_digital_entrepreneurship.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">29</span><div class="session-info"><span class="session-title">Digital Entrepreneurship & Startups</span><span class="session-topic">Lean Startup, BMC, Revenue Models, PH Ecosystem</span></div><span class="session-week">Week 18</span></a>
 
-<a href="topics/4-Final/week18_session30_digital_business_models.html" class="session-link" target="_blank"><span class="session-num">30</span><div class="session-info"><span class="session-title">Digital Business Models</span><span class="session-topic">Platforms, Network Effects, Unit Economics, Pitch</span></div><span class="session-week">Week 18</span></a>
+<a href="topics/4-Final/week18_session30_digital_business_models.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">30</span><div class="session-info"><span class="session-title">Digital Business Models</span><span class="session-topic">Platforms, Network Effects, Unit Economics, Pitch</span></div><span class="session-week">Week 18</span></a>
 
-<a href="topics/4-Final/week19_session31_smart_applications_industry4.html" class="session-link" target="_blank"><span class="session-num">31</span><div class="session-info"><span class="session-title">Smart Applications & Industry 4.0</span><span class="session-topic">Digital Twin, Smart Agri/Health/City, Convergence</span></div><span class="session-week">Week 19</span></a>
+<a href="topics/4-Final/week19_session31_smart_applications_industry4.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">31</span><div class="session-info"><span class="session-title">Smart Applications & Industry 4.0</span><span class="session-topic">Digital Twin, Smart Agri/Health/City, Convergence</span></div><span class="session-week">Week 19</span></a>
 
-<a href="topics/4-Final/week19_session32_course_synthesis_final_review.html" class="session-link" target="_blank"><span class="session-num">32</span><div class="session-info"><span class="session-title">Course Synthesis & Final Review</span><span class="session-topic">20-Week Journey, Exam Prep, Career Paths</span></div><span class="session-week">Week 19</span></a>
+<a href="topics/4-Final/week19_session32_course_synthesis_final_review.html" class="session-link" target="_blank" rel="noopener noreferrer"><span class="session-num">32</span><div class="session-info"><span class="session-title">Course Synthesis & Final Review</span><span class="session-topic">20-Week Journey, Exam Prep, Career Paths</span></div><span class="session-week">Week 19</span></a>
 
 <div class="session-link exam disabled"><span class="session-num">FE</span><div class="session-info"><span class="session-title">Final Examination & Project Defense</span><span class="session-topic">Weeks 16-19 Coverage • 50 Items + Oral Defense</span></div><span class="session-week">Week 20</span></div>
 </div>
@@ -283,5 +286,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0c0c0f;color:#e4e2df;m
 <p style="margin-top:8px">College of Business and Information Technology • General Santos City</p>
 </footer>
 
+<script src="assets/js/access-config.js"></script>
+<script src="assets/js/access-control.js"></script>
 </body>
 </html>
